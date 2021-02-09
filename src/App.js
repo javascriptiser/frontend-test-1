@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Sidebar } from './Components/Sidebar/index'
+import { Switch, Route } from "react-router-dom";
+import { useSidebarList } from './CustomHooks/useSidebarList';
 
 function App() {
+  const newList = useSidebarList();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      {/* Перерисовывается весь App , если распаковывать роуты */}
+      <Switch>
+        {newList.map(({ title, link }, index) => {
+          return <Route path={link} key={index}>
+            <div>{title}</div>
+          </Route>
+        })}
+      </Switch>
     </div>
   );
 }
