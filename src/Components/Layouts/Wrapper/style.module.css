@@ -4,11 +4,13 @@
 	position: absolute;
 	left: 60px;
 	transition: all 600ms;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 .wrapper.sidebarActive {
 	width: 1200px;
 	height: 900px;
 	position: relative;
-	left: 350px;
+	left: 300px;
 }

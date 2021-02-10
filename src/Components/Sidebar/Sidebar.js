@@ -4,7 +4,7 @@ import { useSidebarList } from '../../CustomHooks/useSidebarList'
 import style from './style.module.css'
 import sidebarHeader from '../../Assets/icon/sidebarHeader.png'
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleMenu } from './sidebarSlice';
+import { setCurrentTitle, toggleMenu } from './sidebarSlice';
 
 
 
@@ -48,17 +48,21 @@ const SidebarList = ({ list }) => {
 
 const SidebarItem = ({ title, link, iconDefault, iconActive }) => {
 	const [isAcitve, setIsActive] = useState(false)
+	const dispatch = useDispatch();
 	const onMouseMoveHandler = (e) => {
 		setIsActive(true)
 	}
 	const onMouseLeaveHandler = () => {
 		setIsActive(false)
 	}
+	const onLinkClickHandler = (payload) => {
+		dispatch(setCurrentTitle(payload));
+	}
 	return <div onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={style.sidebarItem}>
 		{isAcitve
 			? <img src={iconActive} alt="icondActive" height={'24px'} width={'24px'} />
 			: <img src={iconDefault} alt="icondDefault" height={'24px'} width={'24px'} />}
-		<Link to={link}>
+		<Link to={link} onClick={() => onLinkClickHandler(title)}>
 			{title}
 		</Link>
 	</div>
