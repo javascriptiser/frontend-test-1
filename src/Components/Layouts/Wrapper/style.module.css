@@ -1,0 +1,14 @@
+.wrapper {
+	width: 1440px;
+	height: 900px;
+	position: absolute;
+	left: 60px;
+	transition: all 600ms;
+}
+
+.wrapper.sidebarActive {
+	width: 1200px;
+	height: 900px;
+	position: relative;
+	left: 350px;
+}

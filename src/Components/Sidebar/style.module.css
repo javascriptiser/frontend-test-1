@@ -21,6 +21,8 @@
 	border-right: 4px solid #E0E5EA;
 	left: -260px;
 	transition: all 600ms;
+	z-index: 1;
+
 }
 
 .sidebar.active {
@@ -42,7 +44,7 @@
 	width: 25px;
 	height: 4px;
 	background-color: #666;
-	margin: 4px 0;
+	margin: 4px 0;	
 }
 
 .sidebar .toggleBtn:hover {

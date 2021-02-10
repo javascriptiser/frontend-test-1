@@ -6,7 +6,7 @@ import { MainWrapper } from './Components/Layouts/Wrapper/MainWrapper';
 function App() {
   const newList = useSidebarList();
   return (
-    <div className="App">
+    <div className="App" style={{position:'relative'}}>
       <Sidebar />
       {/* Перерисовывается весь App , если распаковывать роуты */}
       <MainWrapper>

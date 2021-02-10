@@ -1,12 +1,14 @@
-import { Children } from "react"
+import { useSelector } from "react-redux"
+import style from './style.module.css'
 
 
 
+const MainWrapper = ({ children }) => {
+	const { isActive } = useSelector(state => state.sidebarSlice)
 
-const MainWrapper = ({children}) => {
-	return <div>
+	return <div className={isActive ? `${style.wrapper} ${style.sidebarActive}` : style.wrapper}>
 		{children}
 	</div>
 }
 
-export {MainWrapper}
+export { MainWrapper }
