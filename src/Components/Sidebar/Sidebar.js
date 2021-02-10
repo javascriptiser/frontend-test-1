@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom'
 import { useSidebarList } from '../../CustomHooks/useSidebarList'
 import style from './style.module.css'
 import sidebarHeader from '../../Assets/icon/sidebarHeader.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleMenu } from './sidebarSlice';
 
 
 
 export const Sidebar = () => {
 	const list = useSidebarList();
-	const [isActive, setIsActive] = useState(false);
+	const dispatch = useDispatch();
+	const { isActive } = useSelector(state => state.sidebarSlice)
 	const openMenu = () => {
-		setIsActive(!isActive);
+		dispatch(toggleMenu())
 	}
-
 	return <div className={isActive ? `${style.sidebar} ${style.active}` : style.sidebar}>
 		<div className={style.toggleBtn} onClick={openMenu}>
 			<span></span>
