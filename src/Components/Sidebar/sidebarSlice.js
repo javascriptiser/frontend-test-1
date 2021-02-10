@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const sidebarSlice = createSlice({
 	name: 'sidebarSlice',
 	initialState: {
-		currentTitle: '',
+		currentTitle: 'Каталог',
 		isActive: false
 	},
 	reducers: {
