@@ -2,8 +2,10 @@ import { Sidebar } from './Components/Sidebar/Sidebar'
 import { Switch, Route } from "react-router-dom";
 import { useSidebarList } from './CustomHooks/useSidebarList';
 import { MainWrapper } from './Components/Layouts/Wrapper/MainWrapper';
+import { CardsWrapper } from './Components/Layouts/CardsWrapper/CardsWrapper'
 import { Header } from './Components/Header/Header';
 import style from './style.module.css'
+import { Cards } from './Components/Card/Cards';
 
 function App() {
   const newList = useSidebarList();
@@ -14,11 +16,13 @@ function App() {
         <Header />
         <div className={style.contentWrapper}>
           <Switch>
-            <Route path={'/Catalog'}></Route>
-            <Route path={'/Health'}></Route>
-            <Route path={'/Beauty'}></Route>
-            <Route path={'/Enjoi'}></Route>
-            <Route path={'/Car'}></Route>
+            <CardsWrapper>
+              <Route path={'/Catalog'}><Cards /></Route>
+              <Route path={'/Health'}><Cards /></Route>
+              <Route path={'/Beauty'}><Cards /></Route>
+              <Route path={'/Enjoi'}><Cards /></Route>
+              <Route path={'/Car'}><Cards /></Route>
+            </CardsWrapper>
           </Switch>
         </div>
       </MainWrapper>
