@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.wrapper {
+	width: 240px;
+	padding-top: 41px;
+	background: #F3F4F9;
+}
+
+.logoWrapper {
+	height: 50px;
+	width: 121px;
+	display: flex;
+	align-items: center;
+	padding-left: 41px;
+	margin-bottom: 40px;
+}
+
+.logoWrapper img {
+	margin-right: 10px;
+}
+
+.logoWrapper span {
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.listItemWrapper {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 0em;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	height: 64px;
+	width: 240px;
+	padding: 20px 20px 20px 40px;
+	margin-bottom: 5px;
+}
+
+.listItemWrapper :hover.listItemInnerWrapper a {
+	color: #34abe0;
+}
+
+.listItemInnerWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.listItemInnerWrapper a {
+	margin-left: 14px;
+	text-decoration: none;
+	color: #333333;
+}

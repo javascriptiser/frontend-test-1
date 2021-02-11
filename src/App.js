@@ -4,17 +4,17 @@ import { useSidebarList } from './CustomHooks/useSidebarList';
 import { MainWrapper } from './Components/Layouts/Wrapper/MainWrapper';
 import { CardsWrapper } from './Components/Layouts/CardsWrapper/CardsWrapper'
 import { Header } from './Components/Header/Header';
-import style from './style.module.css'
+import appStyle from './appStyle.module.css'
 import { Cards } from './Components/Card/Cards';
 
 function App() {
   const newList = useSidebarList();
   return (
-    <div className="App" style={{ position: 'relative' }}>
+    <div className="App" className={appStyle.container}>
       <Sidebar />
       <MainWrapper>
         <Header />
-        <div className={style.contentWrapper}>
+        <div className={appStyle.contentWrapper}>
           <Switch>
             <CardsWrapper>
               <Route path={'/Catalog'}><Cards /></Route>
@@ -22,6 +22,7 @@ function App() {
               <Route path={'/Beauty'}><Cards /></Route>
               <Route path={'/Enjoi'}><Cards /></Route>
               <Route path={'/Car'}><Cards /></Route>
+              <Route path={'/'}><Cards /></Route>
             </CardsWrapper>
           </Switch>
         </div>

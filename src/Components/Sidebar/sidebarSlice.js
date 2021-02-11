@@ -5,7 +5,7 @@ export const sidebarSlice = createSlice({
 	name: 'sidebarSlice',
 	initialState: {
 		currentTitle: 'Каталог',
-		isActive: false
+		isActive: true
 	},
 	reducers: {
 		toggleMenu(state) {
