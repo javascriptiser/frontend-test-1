@@ -1,12 +1,10 @@
-import { Children } from "react"
+import style from './style.module.css'
 
+const MainWrapper = ({ children }) => {
 
-
-
-const MainWrapper = ({children}) => {
-	return <div>
+	return <div className={style.wrapper}>
 		{children}
 	</div>
 }
 
-export {MainWrapper}
+export { MainWrapper }

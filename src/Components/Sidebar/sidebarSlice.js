@@ -4,15 +4,19 @@ import { createSlice } from "@reduxjs/toolkit";
 export const sidebarSlice = createSlice({
 	name: 'sidebarSlice',
 	initialState: {
-		isActive: false
+		currentTitle: 'Каталог',
+		isActive: true
 	},
 	reducers: {
 		toggleMenu(state) {
 			state.isActive = !state.isActive
+		},
+		setCurrentTitle(state, action) {
+			state.currentTitle = action.payload;
 		}
 	}
 })
 const { actions } = sidebarSlice;
-export const { toggleMenu } = actions;
+export const { toggleMenu, setCurrentTitle } = actions;
 
 

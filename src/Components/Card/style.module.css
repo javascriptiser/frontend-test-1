@@ -1,0 +1,76 @@
+.cardsWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 40px;
+}
+
+.cardWrapper {
+	position: relative;
+	width: 350px;
+	height: 160px;
+	border: 1px solid #cccccc;
+	margin: 0px 0px 20px 20px;
+	padding: 20px 0px 16px 20px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.cardWrapper:hover{
+	border: 1px solid #df212d;
+}
+
+.cardWrapper h1 {
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.cardWrapper p {
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	opacity: 50%;
+	margin-bottom: 43px;
+}
+
+.discountTitle {
+	font-family: Roboto;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #df212d;
+	margin-bottom: 6px;
+}
+
+.discountDescription {
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0.4em;
+	text-align: left;
+	opacity: 50%;
+}
+
+.imageWrapper {
+	position: absolute;
+	left: 217px;
+	top: 1px;
+}
+
+.imageWrapper img {
+	height: 150px;
+	width: 130px;
+}
