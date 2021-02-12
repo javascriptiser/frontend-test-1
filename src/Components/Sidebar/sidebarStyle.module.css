@@ -4,6 +4,9 @@
 	width: 240px;
 	padding-top: 41px;
 	background: #F3F4F9;
+	height: 100vh;
+	position: fixed;
+	left: 0;
 }
 
 .logoWrapper {

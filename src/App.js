@@ -16,14 +16,12 @@ function App() {
         <Header />
         <div className={appStyle.contentWrapper}>
           <Switch>
-            <CardsWrapper>
               <Route path={'/Catalog'}><Cards /></Route>
               <Route path={'/Health'}><Cards /></Route>
               <Route path={'/Beauty'}><Cards /></Route>
               <Route path={'/Enjoi'}><Cards /></Route>
               <Route path={'/Car'}><Cards /></Route>
               <Route path={'/'}><Cards /></Route>
-            </CardsWrapper>
           </Switch>
         </div>
       </MainWrapper>

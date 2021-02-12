@@ -1,0 +1,6 @@
+.wrapper {
+	width: 1240px;
+	transition: all 600ms;	
+	position: relative;
+	left: 240px;
+}

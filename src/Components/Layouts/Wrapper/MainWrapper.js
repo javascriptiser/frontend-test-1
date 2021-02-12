@@ -1,8 +1,8 @@
-import style from './style.module.css'
+import mainWrapperStyle from './mainWrapperStyle.module.css'
 
 const MainWrapper = ({ children }) => {
 
-	return <div className={style.wrapper}>
+	return <div className={mainWrapperStyle.wrapper}>
 		{children}
 	</div>
 }
