@@ -1,8 +1,10 @@
 .cardsWrapper {
 	display: grid;
-	grid-template-columns: repeat(3, 340px);
+	grid-template-columns: repeat(auto-fill, 340px);
 	grid-gap: 20px;
-	margin: 40px 0px 0px 20px;
+	margin-top: 40px;
+	margin: 0 auto;
+	justify-content: left;
 }
 
 .cardWrapper {
@@ -76,3 +78,46 @@
 	width: 130px;
 }
 
+@media screen and (max-width: 768px) {
+	.cardsWrapper {
+		grid-template-columns: repeat(2, 347px);
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.cardsWrapper {
+		grid-template-columns: repeat(1, 280px);
+		row-gap: 20px;
+	}
+	.cardWrapper {
+		width: 280px;
+		height: 130px;
+		padding: 16px 0px 16px 20px;
+	}
+	.imageWrapper {
+		position: absolute;
+		left: 189px;
+		top: 1px;
+	}
+	.imageWrapper img {
+		height: 120px;
+		width: 89px;
+	}
+	.cardWrapper h1 {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	
+	.cardWrapper p {
+		font-size: 12px;
+		margin-bottom: 22px;
+	}
+	
+	.discountTitle {
+		font-size: 28px;
+	}
+	
+	.discountDescription {
+		font-size: 12px;
+	}
+}
